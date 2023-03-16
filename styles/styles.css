@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap');
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/*
+Paars #5722CD;
+Blauw #4845E4;
+Roze #ED4385;
+Zwart #0C0C0C (voor standaard tekst);
+Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:
+Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
+Grijs #7A7A7A (voor de service-tegel tekst);
+
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 10px;
+}
+
+h1, h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+.outer-container {
+    display: flex;
+    justify-content: center;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 900px;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside {
+    flex-basis: 1000px;
+    flex-shrink: 3;
+}
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    color: #fff;
+    background-color: #5722CD;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin-right: 20px;
+    gap: 20px;
+}
+
+nav li {
+    padding: 10px;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem;
+}
+
+header button {
+    color: #fff;
+    padding: 15px;
+    margin: 30px;
+    background-color: #ED4385;
+    border-radius: 3rem;
+    text-align: center;
+}
+
+.inner-teaser p {
+    padding-top: 3rem;
+}
+
+.stripe {
+    width: 50px;
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+
+.inner-intro {
+    padding: 70px;
+    text-align: center;
+}
+
+.inner-intro h3 {
+    color: #5722CD;
+    padding: 10px;
+}
+
+.inner-intro p {
+    padding-top: 40px;
+}
+
+.inner-intro a {
+    text-decoration: none;
+    color: #5722CD;
+}
+
+/* --------------- 4.3 Work --------------------------- */
+
+
+.work-tekst {
+    text-align: left;
+    width: 80%;
+    padding: 2rem;
+}
+
+.image img {
+    width: 100%;
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.2)
+}
+
+.image {
+    flex-basis: auto;
+    width: 100%;
+    flex-grow: 2;
+}
+
+.line {
+    width: 50px;
+    padding-block: 20px;
+}
+
+.work-tekst p {
+    padding-bottom: 20px;
+}
+
+.view-project {
+    color: #5722CD;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* --------------- 4.4 Sevices ------------------------ */
+
+.inner-container-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 900px;
+    padding: 20px;
+    margin: 2rem;
+}
+
+/* --------------- 4.5 Form --------------------------- */
+
+#contact {
+    background-color: #5722CD;
+    color: #fff;
+    padding: 2rem;
+}
+
+.form {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.form p {
+    text-align: center;
+}
+
+#message {
+    padding-bottom: 100px;
+}
+
+/* --------------- 4.6 Footer ------------------------- */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 15px;
+    background-color: #0C0C0C;
+}
+
+footer p {
+    font-size: 0.8rem;
+    padding-bottom: 15px;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+/* Alles wat men buiten de media query specificeert, geldt dan voor mobiele apparaten */
+
+p {
+    font-size: 16px;
+}
+
+/* --------------- 4.3 Work --------------------------- */
+
+#work {
+    background-color: #F3F6F9;
+    padding-block: 20px;
+}
+
+.work {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1rem;
+}
+
+/* --------------- 4.4 Sevices ------------------------ */
+
+.excerpt {
+    width: 400px;
+    height: 400px;
+    padding: 35px;
+    margin: 20px;
+    font-size: 12px;
+    text-align: left;
+    border: 1px solid #5722CD;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.excerpt p {
+    font-size: 1rem;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+h4 {
+    color: #5722CD;
+    font-size: 1.5rem;
+}
+
+/* Minimaal 576px betekend regels die gelden voor tablets en desktops */
+
+@media screen and (min-width: 576px) {
+    p {
+        font-size: 14px;
+    }
+
+    /* --------------- 4.3 Work --------------------------- */
+
+    #work {
+        background-color: #F3F6F9;
+        padding-block: 50px;
+    }
+
+    .work {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        /*margin: 10px;*/
+    }
+
+    .work:nth-of-type(2) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    /* --------------- 4.4 Sevices ------------------------ */
+
+    .excerpt {
+        width: 250px;
+        height: 250px;
+        padding: 25px;
+        margin: 10px;
+        font-size: 12px;
+        text-align: left;
+        border: 1px solid #5722CD;
+        box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2)
+    }
+
+    .excerpt p {
+        font-size: 0.7rem;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    h4 {
+        color: #5722CD;
+        font-size: 1rem;
+    }
+}
