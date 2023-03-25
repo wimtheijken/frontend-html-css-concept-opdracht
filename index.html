@@ -14,25 +14,27 @@
             <li>Contact Us</li>
         </ul>
     </nav>
-    <div class="outer-container">
-        <div class="aside"></div>
-        <div class="inner-container">
-            <div class="header">
-                <h1>Your website is an investment in the success of your business.</h1>
-                <p>We are here to help you succeed.</p>
-                <button>Let's work together</button>
+    <div class="wrapper">
+        <div class="outer-container">
+            <div class="aside"></div>
+            <div class="inner-container">
+                <div class="header">
+                    <h1>Your website is an investment in the success of your business.</h1>
+                    <p>We are here to help you succeed.</p>
+                    <button>Let's work together</button>
+                </div>
+                <img class="stripe" src="assets/squiggle_line_stripe.svg" alt="">
             </div>
-            <img class="stripe" src="assets/squiggle_line_stripe.svg" alt="">
-            <div class="triangle"></div> <!--Bones opdracht-->
+            <div class="aside"></div>
         </div>
-        <div class="aside"></div>
+        <div class="triangle-top"></div> <!--Bones opdracht-->
     </div>
 </header>
 <main>
     <section class="outer-container">
         <div class="aside"></div>
-        <div class="inner-container">
-            <div class="background-words">hello</div>
+        <div id="hello" class="inner-container">
+            <!--            <div class="background-words">hello</div>-->
             <div class="inner-intro">
                 <h3>Rekupe is a digital agency in Los Angeles.</h3>
                 <h3>We use strategic UX, SEO optimization and beautiful visual designs to help your business
@@ -45,8 +47,8 @@
         <div class="aside"></div>
     </section>
     <section id="work" class="outer-container">
-        <div class="inner-container">
-            <div class="background-words">work</div>
+        <div id="work2" class="inner-container">
+            <div class="background-words"></div>
             <article class="work">
                 <div class="work-tekst">
                     <h3>Rolling Stone</h3>
@@ -81,8 +83,8 @@
         </div>
     </section>
     <section class="outer-container">
-        <div class="inner-container-services">
-            <div class="background-words">services</div>
+        <div id="services" class="inner-container-services">
+            <div class="background-words"></div>
             <article class="excerpt">
                 <img class="icon" src="assets/icon_web-design.svg" alt="icon web design">
                 <h4>Web Design</h4>
@@ -146,24 +148,27 @@
             </article>
         </div>
     </section>
-    <section id="contact" class="outer-container">
-        <div class="aside"></div>
-        <div class="inner-container">
-            <div class="form">
-                <h2> Let's work together</h2>
-                <p>Have a question? Need a quote? Let us know!</p>
-                <form action="">
-                    <label>Name</label>
-                    <input type="text" id="name" name="name" placeholder="Name">
-                    <label>Email</label>
-                    <input type="email" id="email" name="email" placeholder="Email">
-                    <label>Message</label>
-                    <input type="textarea" id="message" name="message" placeholder="Message" rows="5">
-                </form>
+    <div class="wrapper">
+        <div class="triangle-bottom"></div> <!--Bones opdracht-->
+        <section id="contact" class="outer-container">
+            <div class="aside"></div>
+            <div class="inner-container">
+                <div class="form">
+                    <h2> Let's work together</h2>
+                    <p>Have a question? Need a quote? Let us know!</p>
+                    <form action="">
+                        <label>Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name">
+                        <label>Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email">
+                        <label>Message</label>
+                        <input type="textarea" id="message" name="message" placeholder="Message" rows="5">
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="aside"></div>
-    </section>
+            <div class="aside"></div>
+        </section>
+    </div>
 </main>
 <footer class="outer-container">
     <credits class="inner-container">

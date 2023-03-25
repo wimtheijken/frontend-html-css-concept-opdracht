@@ -11,6 +11,8 @@
         4.2 Introduction
         etc.
     5. Media Queries
+        5.1 Mobile
+        5.2 Desktop
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
@@ -23,14 +25,14 @@
 }
 
 :root {
-    --wit: #fff;
-    --paars: #5722CD;
-    --blauw: #4845E4;
-    --rose: #ED4385;
-    --zwart: #0C0C0C;
-    --lichtpaars: #F2F0FF;
-    --lichtgrijs: #F3F6F9;
-    --grijs: #7A7A7A;
+    --white: #fff;
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --black: #0C0C0C;
+    --lightpurple: #F2F0FF;
+    --lightgray: #F3F6F9;
+    --gray: #7A7A7A;
 }
 
 /* ------------------------------- 2. Typography ----------------------------------- */
@@ -80,21 +82,39 @@ h3 {
 
 /* ------------------ BONUS OPDRACHT ------------------- */
 
-.triangle {
+.triangle-top {
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 40px 0 0 100vw;
-    border-color: transparent transparent transparent var(--wit);
+    border-color: transparent transparent transparent var(--white);
+    margin-top: -40px;
+}
+
+.triangle-bottom {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100vw 40px 0;
+    border-color: transparent var(--white) transparent transparent;
     margin-top: -40px;
 }
 
 .background-words {
+    padding-top: 100px;
+}
+
+.wrapper {
+    background-color: var(--purple);
+    background-image: url("../assets/noise-texture.png"); /* BONUS OPDRACHT */
+}
+
+/*.background-words {
     position: absolute;
-    color: var(--lichtpaars);
+    color: var(--lightpurple);
     z-index: -1;
     font-size: calc(100vw / 5);
-}
+}*/
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
@@ -102,8 +122,6 @@ h3 {
 
 header {
     color: #fff;
-    background-color: var(--paars);
-    background-image: url("../assets/noise-texture.png"); /* BONUS OPDRACHT */
 }
 
 nav {
@@ -133,7 +151,7 @@ header button {
     color: #fff;
     padding: 15px;
     margin: 30px;
-    background-color: var(--rose);
+    background-color: var(--pink);
     border-radius: 3rem;
     text-align: center;
 }
@@ -149,12 +167,14 @@ header button {
 /* --------------- 4.2 Introduction ------------------- */
 
 .inner-intro {
-    padding: 70px;
+    padding-inline: 70px;
+    padding-top: 100px;
+    padding-bottom: 70px;
     text-align: center;
 }
 
 .inner-intro h3 {
-    color: var(--paars);
+    color: var(--purple);
     padding: 10px;
 }
 
@@ -164,7 +184,7 @@ header button {
 
 .inner-intro a {
     text-decoration: none;
-    color: var(--paars);
+    color: var(--purple);
 }
 
 /* --------------- 4.3 Work --------------------------- */
@@ -196,7 +216,7 @@ header button {
 }
 
 .view-project {
-    color: var(--paars);
+    color: var(--purple);
     font-size: 0.7rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -210,16 +230,17 @@ header button {
     flex-wrap: wrap;
     justify-content: center;
     width: 900px;
-    padding: 20px;
+    padding-inline: 20px;
+    padding-top: 100px; /* deze waarde is voor desktop @media aangepast */
+    padding-bottom: 50px;
     margin: 2rem;
 }
 
 /* --------------- 4.5 Form --------------------------- */
 
 #contact {
-    background-color: var(--paars);
     color: #fff;
-    padding: 2rem;
+    padding-top: 20px;
 }
 
 .form {
@@ -255,9 +276,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--wit);
+    color: var(--white);
     padding: 15px;
-    background-color: var(--zwart);
+    background-color: var(--black);
 }
 
 footer p {
@@ -268,25 +289,29 @@ footer p {
 
 /* Alles wat men buiten de media query specificeert, geldt dan voor mobiele apparaten */
 
+/* --------------- 5.1 Mobile --------------------------- */
+
 p {
     font-size: 16px;
 }
 
-/* --------------- 4.3 Work --------------------------- */
+/* --------------- 5.1.1 Work --------------------------- */
 
 #work {
-    background-color: var(--lichtgrijs);
-    padding-block: 20px;
+    position: relative;
+    background-color: var(--lightgray);
+    padding-block: 50px;
     z-index: -2;
 }
 
 .work {
+    position: relative;
     display: flex;
     flex-direction: column-reverse;
     padding: 1rem;
 }
 
-/* --------------- 4.4 Sevices ------------------------ */
+/* --------------- 5.1.2 Sevices ------------------------ */
 
 .excerpt {
     width: 400px;
@@ -295,7 +320,8 @@ p {
     margin: 20px;
     font-size: 12px;
     text-align: left;
-    border: 1px solid var(--paars);
+    background-color: var(--white);
+    border: 1px solid var(--purple);
     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2)
 }
 
@@ -309,18 +335,53 @@ p {
 }
 
 h4 {
-    color: var(--paars);
+    color: var(--purple);
     font-size: 1.5rem;
 }
 
-/* Minimaal 576px betekend regels die gelden voor tablets en desktops */
+/* --------------- 5.1.2 Background words --------------- */
+
+#hello::before {
+    content: "hello";
+    display: block;
+    color: var(--lightpurple);
+    z-index: -1;
+    font-size: 10rem;
+    margin-top: 0;
+    font-weight: bold;
+    position: absolute;
+}
+
+#work::before {
+    content: "work";
+    display: block;
+    color: var(--lightpurple);
+    z-index: -1;
+    font-size: 10rem;
+    margin-top: -30px;
+    font-weight: bold;
+    position: absolute;
+}
+
+#services::before {
+    content: "services";
+    display: block;
+    color: var(--lightpurple);
+    z-index: -1;
+    font-size: 7rem;
+    margin-top: -80px;
+    font-weight: bold;
+    position: absolute;
+}
+
+/* Minimaal 576px betekend regels die gelden voor tablets */
 
 @media screen and (min-width: 576px) {
     p {
         font-size: 14px;
     }
 
-    /* --------------- 4.3 Work --------------------------- */
+    /* --------------- 5.2.1 Work --------------------------- */
 
     #work {
         position: relative;
@@ -340,7 +401,7 @@ h4 {
         flex-direction: row-reverse;
     }
 
-    /* --------------- 4.4 Sevices ------------------------ */
+    /* --------------- 5.2.2 Sevices ------------------------ */
 
     .excerpt {
         width: 250px;
@@ -349,7 +410,7 @@ h4 {
         margin: 10px;
         font-size: 12px;
         text-align: left;
-        border: 1px solid var(--paars);
+        border: 1px solid var(--purple);
         box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2)
     }
 
@@ -363,8 +424,53 @@ h4 {
     }
 
     h4 {
-        color: var(--paars);
+        color: var(--purple);
         font-size: 1rem;
+    }
+
+    /* --------------- 5.2.2 Background words --------------- */
+
+    #hello::before {
+        font-size: 15rem;
+        margin-top: -20px;
+    }
+
+    #work::before {
+        font-size: 15rem;
+        margin-top: -50px;
+    }
+
+    #services::before {
+        font-size: 10rem;
+        margin-top: -120px;
     }
 }
 
+/* Minimaal 992px betekend regels die gelden voor desktops */
+
+
+@media screen and (min-width: 992px) {
+
+    #work {
+        padding-block: 100px;
+    }
+
+    .inner-container-services {
+        padding-top: 120px;
+    }
+
+    #hello::before {
+        font-size: 20rem;
+        margin-top: -20px;
+    }
+
+    #work::before {
+        font-size: 20rem;
+        margin-top: -100px;
+    }
+
+    #services::before {
+        font-size: 15rem;
+        margin-top: -150px;
+    }
+}
