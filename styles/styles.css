@@ -109,13 +109,6 @@ h3 {
     background-image: url("../assets/noise-texture.png"); /* BONUS OPDRACHT */
 }
 
-/*.background-words {
-    position: absolute;
-    color: var(--lightpurple);
-    z-index: -1;
-    font-size: calc(100vw / 5);
-}*/
-
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
@@ -258,8 +251,8 @@ label {
 }
 
 input {
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 0.7rem;
+    margin-bottom: 1.2rem;
 }
 
 .form p {
